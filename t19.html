@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        div#container{
+            width: 1150px;
+            min-height: 100%;
+            background-color: #f4bc72;
+            margin: auto;
+        }
+        div#container header{
+            height: 150px;
+            background-color: #222;
+        }
+        header section#logo{
+            height: 120px;
+            color: #f49800;
+            font-size: 30px;
+            padding: 10px 0 0 10px;
+        }
+        header nav{
+            height: 30px;
+            background-color: #111;
+            color: #FFF;
+            text-align: center;
+            line-height: 30px;
+        }
+        nav a{
+            color: #FFF;
+            padding: 0 15px;
+            display: block;
+            transition: all 0.5s;
+        }
+        nav a:hover{
+            color: #f49800;
+            background-color: #333;
+        }
+        nav ul{
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li{
+            display: inline-block;
+        }
+        nav ul ul{
+            background-color: #111;
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s;
+        }
+        nav ul li:hover>ul{
+            opacity: 1;
+            transform: rotateY(720deg);
+            visibility: visible;
+        }
+        nav ul ul li{
+            position: relative;
+            display: block;
+        }
+        nav ul ul ul{
+            top: 0;
+            left: 100%;
+        }
+        nav ul ul a{
+            white-space: nowrap;
+        }
+        div#container main{
+            padding-bottom: 50px;
+            display: flex;
+        }
+        main section#leftSide{
+            width: 70%;
+            padding: 10px 5px 10px 10px;
+        }
+        main section#rightSide{
+            width: 30%;
+            padding: 10px 10px 10px 5px;
+        }
+        main article, main aside{
+            background-color: #eaab57;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 0 2px #333;
+        }
+        footer{
+            width: 1150px;
+            height: 50px;
+            background-color: #000;
+            color: #CCC;
+            font-size: 13px;
+            text-align: center;
+            margin: -50px auto auto auto;
+        }
+        footer a{
+            color: #317df4;
+        }
+
+        @media only screen and (min-width: 992px) and (max-width: 1200px){
+            div#container{
+                width: 950px;
+            }
+            footer{
+                width: 950px;
+            }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 991px){
+            div#container{
+                width: 730px;
+            }
+            header section#logo{
+                font-size: 25px;
+            }
+            footer{
+                width: 730px;
+            }
+        }
+        @media only screen and (max-width: 767px){
+            div#container{
+                width: 90%;
+            }
+            header section#logo{
+                font-size: 25px;
+            }
+            div#container main{
+                flex-direction: column;
+            }
+            main section#leftSide, main section#rightSide{
+                width: 100%;
+                padding: 10px 10px 0 10px;
+            }
+            footer{
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <header>
+        <section id="logo">
+            MySite
+        </section>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li><li><a href="#">AboutUs</a></li><li><a href="#">Products</a>
+                    <ul>
+                        <li><a href="#">Product 1</a></li>
+                        <li><a href="#">Product 2</a></li>
+                        <li><a href="#">Product 3</a></li>
+                        <li><a href="#">Product 4</a>
+                            <ul>
+                                <li><a href="#">Item 1</a></li>
+                                <li><a href="#">Item 2</a></li>
+                                <li><a href="#">Item 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li><li><a href="#">ContactUs</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="leftSide">
+            <article>
+                <h2>Title 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab nam perferendis sed. Amet architecto asperiores atque blanditiis dolore doloremque error hic illum omnis quia repudiandae tenetur, ullam voluptatum. Animi, nisi.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis culpa distinctio
+                    dolorum eaque eum excepturi explicabo laborum magni, maiores maxime non, quis repudiandae ut
+                    voluptatibus! Asperiores autem debitis dignissimos facilis natus odio perspiciatis possimus
+                    praesentium quas voluptatem? Debitis dolores ex ipsa ipsum molestiae nisi numquam sit? Natus
+                    perferendis, quae.</p>
+                <p>Amet assumenda cum cupiditate dolores error excepturi hic modi numquam officiis quia? Consequatur
+                    culpa doloribus, harum illum laudantium magnam nam quae quo repudiandae sequi. At aut consectetur
+                    corporis culpa cumque debitis, inventore maxime necessitatibus nobis pariatur praesentium provident
+                    quo rerum sequi sit vitae voluptate? Dolores in, maxime. Perspiciatis, sapiente, temporibus?</p>
+            </article>
+            <article>
+                <h2>Title 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores at blanditiis debitis delectus dicta iusto minima modi natus non nulla quia, ratione repellat repellendus saepe similique soluta. Labore, molestiae.</p>
+            </article>
+        </section>
+        <section id="rightSide">
+            <aside>
+                <h3>Title 3</h3>
+            </aside>
+            <aside>
+                <h3>Title 4</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolore fuga maxime officia perferendis repellendus, ut! Aliquam aliquid architecto assumenda eius illum modi, mollitia pariatur quas ullam voluptate voluptatem voluptates.</p>
+            </aside>
+            <aside>
+                <h3>Title 5</h3>
+            </aside>
+        </section>
+    </main>
+</div>
+<footer>
+    Copyright 2023 by <a href="#">MySite</a>
+</footer>
+</body>
+</html>
